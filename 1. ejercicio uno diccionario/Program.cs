@@ -15,19 +15,31 @@ namespace _1.ejercicio_uno_diccionario
         {
             Dictionary<int,string> idestudiantes = new Dictionary<int,string>();
 
-            idestudiantes.Add(1, "Ricardo");
+            idestudiantes.Add(12345, "Ricardo");
 
-            idestudiantes.Add(2, "Juan");
+            idestudiantes.Add(21367, "Juan");
 
-            idestudiantes.Add(3, "Carlos");
+            idestudiantes.Add(30754, "Carlos");
 
-            idestudiantes.Add(4, "Otto");
+            idestudiantes.Add(48763, "Otto");
 
             Console.WriteLine("Usted ha ingresado a la minibase de datos de estudiantes");
 
             Console.WriteLine();
 
-            Console.WriteLine(idestudiantes[1]);
+            Console.WriteLine("Los estudiantes son los siguientes:_");
+
+            foreach(var item in idestudiantes)
+
+            {
+                Console.WriteLine();
+
+                Console.WriteLine($"El estudiante con número de carnet {item.Key} es:_ {item.Value} ");
+
+                Console.WriteLine();
+
+
+            }
 
             
 
