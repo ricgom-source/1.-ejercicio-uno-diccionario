@@ -18,6 +18,22 @@ namespace _2.ejercicio_dos_diccionarios
 
             productos.Add(654321, "Manzana");
 
+            productos.Add(789456, "Piña");
+
+            Console.WriteLine("Los productos contenidos en el diccionario son los siguientes:");
+
+            Console.WriteLine();
+
+            foreach(var item in productos)
+
+            {
+                Console.WriteLine(item.Value);
+
+                Console.WriteLine();
+
+
+            }
+
 
 
 
