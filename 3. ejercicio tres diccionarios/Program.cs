@@ -30,16 +30,29 @@ namespace _3.ejercicio_tres_diccionarios
 
             Console.WriteLine();
 
-            if(nomb=="Juan")
+            if (nomb=="Juan")
 
             {
 
-                Console.WriteLine($"La nota de 'Juan' es:_{nombreynota["Juan"]}");
+                Console.WriteLine($"La nota de 'Juan' es de:_ {nombreynota["Juan"]} puntos");
 
             }
 
+            else if (nomb == "Roberto")
 
+            {
 
+                Console.WriteLine($"La nota de 'Roberto' es de:_ {nombreynota["Roberto"]} puntos");
+
+            }
+
+            else if (nomb == "Lucas")
+
+            {
+
+                Console.WriteLine($"La nota de 'Lucas' es de:_ {nombreynota["Lucas"]} puntos");
+
+            }
 
 
 
