@@ -46,6 +46,71 @@ namespace _4.ejercicio_cuatro_de_diccionarios
 
                 }
 
+                else if (codigo == 01057)
+
+
+                {
+
+                    Console.WriteLine();
+
+                    Console.WriteLine($"Usted ha ingresado el código postal de la ciudad de:_ {ciudades[01057]}");
+
+                    break;
+                }
+
+                else if (codigo == 16001)
+
+                {
+                    Console.WriteLine();
+
+                    Console.WriteLine($"Usted ha ingresado el código postal de la ciudad de:_ {ciudades[16001]}");
+
+                    break;
+
+                }
+
+                else if (codigo == 12001)
+
+                {
+                    Console.WriteLine();
+
+                    Console.WriteLine($"Usted ha ingresado el código postal de la ciudad de:_ {ciudades[16001]}");
+
+                    break;
+
+
+                }
+
+                else if (codigo == 03001)
+
+                {
+                    Console.WriteLine();
+
+                    Console.WriteLine($"Usted ha ingesado el código postal de la ciudad de:_ {ciudades[03001]}");
+
+                    break;
+
+
+                }
+
+                else 
+
+                {
+                    Console.WriteLine();
+
+                    Console.Clear();
+
+                    Console.WriteLine("Usted no ha ingresado un código postal valido");
+
+                    Console.WriteLine("Precione enter para intentarlo nuevamente");
+
+                    Console.ReadKey();
+
+                    Console.Clear();
+
+
+                }
+
 
 
             }
