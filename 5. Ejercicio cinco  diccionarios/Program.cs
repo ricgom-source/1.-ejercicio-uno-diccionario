@@ -117,6 +117,15 @@ namespace _5.Ejercicio_cinco__diccionarios
 
                             }
 
+                            else
+
+                            {
+                                Console.WriteLine();
+
+                                Console.WriteLine("Usted no ha ingresado un nombre de usuario registrado");
+
+                            }
+
                             Console.WriteLine();
 
                             Console.WriteLine("Presione enter para salir del submenú");
