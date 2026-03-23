@@ -4,33 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _7.Ejercicio_siete_diccionarios
+namespace _8.ejercicio_de_diccionarios
 {
     internal class Program
     {
         static void Main(string[] args)
 
         {
-            Dictionary<int,string> productos = new Dictionary<int,string>();
+            Dictionary<int, string> empleados = new Dictionary<int, string>();
 
             int opcion;
 
             do
             {
 
-                Console.WriteLine("Bienvenido a la coleccion de productos");
+                Console.WriteLine("Bienvenido al sistema de la empresa de Mcdonalss");
 
                 Console.WriteLine();
 
-                Console.WriteLine("1. Agregar un producto");
+                Console.WriteLine("1. Agregar nuevo empleado");
 
                 Console.WriteLine();
 
-                Console.WriteLine("2. Mostrar los productos agregados");
+                Console.WriteLine("2. Mostrar los empleados activos");
 
                 Console.WriteLine();
 
-                Console.WriteLine("3. Salir del menú");
+                Console.WriteLine("3. Modificar nombre de empleado");
+
+                Console.WriteLine();
+
+                Console.WriteLine("4. Salir del menú");
 
                 Console.WriteLine();
 
@@ -38,25 +42,25 @@ namespace _7.Ejercicio_siete_diccionarios
 
                 opcion = int.Parse(Console.ReadLine());
 
-                switch(opcion)
+                switch (opcion)
 
                 {
                     case 1:
 
                         Console.Clear();
 
-                        Console.WriteLine("Bienvenido a la opcion para agregar productos");
+                        Console.WriteLine("Bienvenido a la opcion para registrar nuevo empleado");
 
                         Console.WriteLine();
 
-                        Console.Write("Ingrese el código del producto:_ ");
+                        Console.Write("Ingrese el número de carnet del empleado:_ ");
 
                         int codigo = int.Parse(Console.ReadLine());
 
-                        if (productos.ContainsKey(codigo))
+                        if (empleados.ContainsKey(codigo))
 
                         {
-                            Console.WriteLine("Usted ya ha registrado un producto con este código");
+                            Console.WriteLine("Usted ya ha registrado un empleado con este número de carnet");
 
                             Console.ReadKey();
 
@@ -75,13 +79,13 @@ namespace _7.Ejercicio_siete_diccionarios
 
                             Console.WriteLine();
 
-                            Console.Write("Ingrese el nombre del producto:_ ");
+                            Console.Write("Ingrese el nombre del empleado:_ ");
 
-                            string nombrepro = Console.ReadLine();
+                            string nombre = Console.ReadLine();
 
                             Console.WriteLine();
 
-                            productos.Add(codigo, nombrepro);
+                            empleados.Add(codigo, nombre);
 
                             Console.WriteLine("Presione enter para finalizar el registro");
 
@@ -93,24 +97,26 @@ namespace _7.Ejercicio_siete_diccionarios
 
                         break;
 
+
                     case 2:
+
                         Console.Clear();
 
-                        Console.WriteLine("Bienvenido a la opcion mostrar productos");
+                        Console.WriteLine("Bienvenido a la opcion de mostrar empleados activos");
 
                         Console.WriteLine();
 
-                        Console.WriteLine("Los productos agregados son: ");
+                        Console.WriteLine("Los empleados activos son: ");
 
                         Console.WriteLine();
 
-                        foreach(var item in productos)
+                        foreach (var item in empleados)
 
                         {
 
                             Console.WriteLine(item.Value);
 
-                                Console.WriteLine();
+                            Console.WriteLine();
 
                         }
 
@@ -127,15 +133,50 @@ namespace _7.Ejercicio_siete_diccionarios
                         break;
 
                     case 3:
+
                         Console.Clear();
 
-                        Console.WriteLine("Usted ha salido del menu");
+                        Console.WriteLine("Bienvenido a la opcion de modificar nombre de empleado");
+
+                        Console.WriteLine();
+
+                        Console.Write("Ingrese el número de carnet del empleado: ");
+
+                        codigo = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine();
+
+                        Console.Write("Ingrese el nuevo nombre del empleado:_ ");
+
+                        string nuevonombre = Console.ReadLine();
+
+                        empleados[codigo] = nuevonombre;
+
+                        Console.WriteLine();
+
+                        Console.WriteLine("Presione enter para finalizar la acción");
+
+                        Console.ReadKey();
+
+                        Console.Clear();
 
 
                         break;
 
+                    case 4:
+
+                        Console.Clear();
+
+                        Console.WriteLine("Usted ha salido del menu");
+
+                        break;
+
+
+
+
 
                     default:
+
                         Console.Clear();
 
                         Console.WriteLine("Usted no ha ingresado una opcion valida");
@@ -156,15 +197,11 @@ namespace _7.Ejercicio_siete_diccionarios
 
                 }
 
-            
+
 
             }
 
-            while(opcion != 3) ;
-
-
-
-
+            while (opcion != 4);
 
 
 
